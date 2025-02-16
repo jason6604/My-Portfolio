@@ -1,0 +1,87 @@
+.portfolio {
+    display:inline-block;
+    width: 100%;
+    padding: 100px 0;
+    background-color: #ffffff;
+    color:black;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .section-header p {
+    color: #6c757d;
+  }
+  
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 50px;
+  }
+  
+  .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .portfolio-image {
+    position: relative;
+  }
+  
+  .portfolio-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: fill;
+  }
+  
+  .portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+  }
+  
+  .portfolio-overlay h3 {
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .portfolio-overlay p {
+    color: #ccc;
+    margin-bottom: 20px;
+  }
+  
+  .view-project {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .view-project:hover {
+    background: #0056b3;
+  }

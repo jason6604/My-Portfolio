@@ -1,0 +1,98 @@
+.header {
+    /*height: 100vh;*/
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    gap: 20px;
+    background: #051525;
+  }
+  
+  .header-content {
+    max-width: 600px;
+  }
+
+  .header-content img {
+    width:25px;
+    height: auto;
+  }
+   
+  .header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+
+  .header h1 span {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .header h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #6c757d;
+  }
+  
+  .header-buttons {
+    display: flex;    
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .header-buttons .primary-btn:hover {
+    background: #007bff;
+    color: white;
+  }
+  
+  .primary-btn, .secondary-btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .primary-btn {
+    background: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+  }
+  
+  .secondary-btn {
+    background: #007bff;
+    border: 2px solid #007bff;
+    color: white;
+  }
+  
+  .header-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header-image img {
+    max-width: 80%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      text-align: center;
+      padding: 100px 20px;
+    }
+  
+    .header h1 {
+      font-size: 2.5rem;
+    }
+  
+    .header-buttons {
+      justify-content: center;
+    }
+  }
