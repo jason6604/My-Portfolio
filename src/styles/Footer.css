@@ -1,7 +1,7 @@
 .footer {
     background-color: #2d2d2d;
     color: white;
-    padding: 80px 0 20px;
+    padding: 0px 0 20px;
   }
   
   .footer-container {
@@ -79,7 +79,7 @@
   
   .footer-bottom {
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /*border-top: 1px solid rgba(255, 255, 255, 0.1);*/
     display: flex;
     justify-content: space-between;
     align-items: center;

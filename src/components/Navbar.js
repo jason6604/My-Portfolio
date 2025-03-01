@@ -10,11 +10,11 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [isLangOpen, setIsLangOpen] = useState(false);
-  const { currentLang, setCurrentLang } = useContext(LanguageContext);
+  const { currentLang, setCurrentLang, translations } = useContext(LanguageContext);
   const langDropdownRef = useRef(null);
   const languages = [
     { code: 'en', label: 'English' },
-    { code: 'jp', label: '日文' },
+    { code: 'jp', label: '日本語' },
     { code: 'tw', label: '中文' }
   ];
 
@@ -59,11 +59,11 @@ const Navbar = () => {
   }, []);
 
   const menuItems = [
-    { title: 'Home', to: 'home' },
-    { title: 'About', to: 'about' },
-    { title: 'Skills', to: 'skills' },
-    { title: 'Portfolio', to: 'portfolio' },    
-    { title: 'Contact', to: 'contact' }
+    { title: translations.Navbar.home, to: 'home' },
+    { title: translations.Navbar.about, to: 'about' },
+    { title: translations.Navbar.skills, to: 'skills' },
+    { title: translations.Navbar.portfolio, to: 'portfolio' },    
+    { title: translations.Navbar.contact, to: 'contact' }
   ];
 
   const menuVariants = {

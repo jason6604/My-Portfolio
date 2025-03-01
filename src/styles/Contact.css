@@ -1,6 +1,7 @@
   .contact {
     padding: 100px 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    /*background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);*/
+    background: #202020;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -20,8 +21,13 @@
   
   .contact-header h2 {
     font-size: clamp(2rem, 5vw, 3rem);
-    color: #2d2d2d;
+    color: #ffffff;
     margin-bottom: 15px;
+    font-weight: 200;
+  }
+
+  .contact-header h2 strong {
+    font-weight: 800;
   }
   
   .contact-header p {
@@ -40,29 +46,35 @@
     flex-direction: column;
     gap: 30px;
   }
+
+  .contact-info h3 {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color:#fffafa;
+  }
   
   .info-card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
+    background: #333;
+    padding: 15px;
+    border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     text-align: center;
   }
   
   .info-card i {
     font-size: 2rem;
-    color: #007bff;
+    color: #2c3e50;
     margin-bottom: 15px;
   }
   
   .info-card h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #2d2d2d;
+    color: rgba(255, 255, 255, 0.5);
   }
   
   .info-card p {
-    color: #6c757d;
+    color: #ffffff;
   }
   
   .social-links {
@@ -86,10 +98,10 @@
   }
   
   .contact-form {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    background: #202020;
+    padding: 20px;
+    /*border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);*/
   }
   
   .form-group {
@@ -98,12 +110,20 @@
   
   .form-group input,
   .form-group textarea {
+    background: #333;
     width: 100%;
     padding: 15px;
-    border: 2px solid #e9ecef;
+    /*border: 2px solid #e9ecef;*/
+    border:none;
     border-radius: 10px;
     font-size: 1rem;
+    color: white;
     transition: all 0.3s ease;
+  }
+
+  ::placeholder {
+    color:#515151;
+    opacity: 1;
   }
   
   .form-group input:focus,

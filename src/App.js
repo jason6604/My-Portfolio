@@ -1,7 +1,7 @@
 import React from 'react';
 /*import { BrowserRouter as Router } from 'react-router-dom';*/
 import Navbar from './components/Navbar';
-import Header from './components/Header';
+import Home from './components/Home';
 import Portfolio from './components/Portfolio';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -26,7 +26,7 @@ function App() {
     }}>
       <div className="App">
         <Navbar />
-        <Header />
+        <Home />
         <About />
         <Skills />
         <Portfolio />

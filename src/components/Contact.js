@@ -21,10 +21,10 @@ const Contact = () => {
     try {
       // Replace with your EmailJS service details
       const result = await emailjs.sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        'service_g1ypn6j',
+        'template_zsryj1s',
         formRef.current,
-        'YOUR_PUBLIC_KEY'
+        '8sIcQDn_NYzwYjwBB'
       );
 
       if (result.text === 'OK') {
@@ -74,8 +74,7 @@ const Contact = () => {
         viewport={{ once: true }}
       >
         <motion.div className="contact-header" variants={itemVariants}>
-          <h2>Let's Work Together</h2>
-          <p>Have a project in mind? Get in touch!</p>
+          <h2>Get <strong>In Touch</strong></h2>
         </motion.div>
 
         <div className="contact-content">
@@ -84,6 +83,7 @@ const Contact = () => {
             variants={itemVariants}
           >
             {/* Contact Info Cards with Hover Animation */}
+            <h3>My Contact Details</h3>
             <motion.div 
               className="info-card"
               whileHover={{ scale: 1.05 }}
@@ -91,7 +91,7 @@ const Contact = () => {
             >
               <i className="fas fa-map-marker-alt"></i>
               <h3>Location</h3>
-              <p>New York, NY</p>
+              <p>Tokyo, Japan</p>
             </motion.div>
 
             <motion.div 
@@ -101,11 +101,11 @@ const Contact = () => {
             >
               <i className="fas fa-envelope"></i>
               <h3>Email</h3>
-              <p>your.email@example.com</p>
+              <p>jasontsai6604@gmail.com</p>
             </motion.div>
 
             {/* Social Media Links with Hover Effects */}
-            <motion.div className="social-links">
+            {/*<motion.div className="social-links">
               {['linkedin', 'github', 'twitter'].map((platform) => (
                 <motion.a
                   key={platform}
@@ -118,7 +118,7 @@ const Contact = () => {
                   <i className={`fab fa-${platform}`}></i>
                 </motion.a>
               ))}
-            </motion.div>
+            </motion.div>*/}
           </motion.div>
 
           <motion.form 
@@ -133,7 +133,7 @@ const Contact = () => {
             >
               <input
                 type="text"
-                name="name"
+                name="from_name"
                 placeholder="Your Name"
                 value={formData.name}
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -147,7 +147,7 @@ const Contact = () => {
             >
               <input
                 type="email"
-                name="email"
+                name="from_email"
                 placeholder="Your Email"
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}

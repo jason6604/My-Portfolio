@@ -1,16 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
+import { LanguageContext } from '../App';
+import parse from 'html-react-parser';
 import '../styles/About.css';
 import twicon from '../assets/taiwan.png'
 import jpicon from '../assets/japan.png'
 import cnicon from '../assets/china.png'
 
 const About = () => {
-  const stats = [
-    { number: '10+', text: 'Years Experience' },
-    { number: '30+', text: 'Projects Completed' },
-    { number: '8+', text: 'Achievements & Certificates' }
-  ];
+  const { translations } = useContext(LanguageContext);
 
   const WorkExperience = [
     {years: '2020-2025', company:'LYC | Hitachi Solution', jobtitle: 'Technical Lead', jobsummary:'Dynamic 365 CE', location:['Japan']},
@@ -49,27 +47,16 @@ const About = () => {
           viewport={{ once: true }}
         >
           <div className="about-text">
-            <h2>About Me</h2>
-            <p>
-              Skilled Full Stack Software Engineer with 10 years of experience.<br/>
-              Passionate about providing high-quality and elegant solutions.
-            </p>
-            <p>
-              Strong knowledge in front-end and back-end development,<br/>
-              proficient in using different frameworks, programming languages and tools.<br/>
-              Dedicate in requirement analysis, development and troubleshooting,<br/>
-              also pay great attention to team communication and cooperation.
-            </p>
-
+            {parse(translations.about.aboutText)}
             <div className="about-buttons">
               <a href="/path-to-cv.pdf" className="cv-button" download>
-                Download CV
+                {translations.about.button.downloadCV}
               </a>              
             </div>
           </div>
 
           <div className="about-timeline">
-            {WorkExperience.map((job, index) => (
+            {translations.about.workExperience.map((job, index) => (
               <div className={(index+1) % 2 === 1 ? "timeline-container-left" : "timeline-container-right"}>
                 <div className='timeline-content'>
                   <h4>{job.years}</h4>
@@ -93,7 +80,7 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          {stats.map((stat, index) => (
+          {translations.about.stats.map((stat, index) => (
             <div className="stat-item" key={index}>
               <h3>{stat.file ? <a href={stat.file} target="_blank" rel="noreferrer">{stat.number}</a> : stat.number}</h3>
               <p>{stat.text}</p>
@@ -108,9 +95,9 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <h3>My Expertise</h3>
+          <h3>{translations.about.expertises.title}</h3>
           <div className="expertise-grid">
-            {Expertises.map((expertises) => (
+            {translations.about.expertises.data.map((expertises) => (
               <div className="expertise-container">     
                 <h4>{expertises.Category}</h4>
                 <div className='expertise-items'>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-scroll';
+/*import { Link } from 'react-scroll';*/
 import '../styles/Footer.css';
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="footer-content">
+        {/*<div className="footer-content">
           <div className="footer-section">
             <h3>Your Name</h3>
             <p>UX Designer & Developer</p>
@@ -45,14 +45,14 @@ const Footer = () => {
             <p><i className="fas fa-envelope"></i> your.email@example.com</p>
             <p><i className="fas fa-phone"></i> +1 (555) 123-4567</p>
           </div>
-        </div>
+        </div>*/}
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Your Name. All rights reserved.</p>
-          <div className="footer-links">
+          <p>Copyright &copy; {currentYear} All rights reserved.</p>
+          {/*<div className="footer-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
-          </div>
+          </div>*/}
         </div>
       </div>
     </footer>

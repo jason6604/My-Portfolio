@@ -7,8 +7,7 @@ const Skills = () => {
     {
       category: "Domain",
       skills: [
-        { name: "Dynamics 365", level: 90 },
-        { name: "API Integration", level: 85 },
+        { name: "Dynamics 365", level: 90 },        
         { name: "KPI System", level: 85 },
         { name: "eHRD", level: 80 },
         { name: "Scrum", level: 80 }
@@ -17,6 +16,7 @@ const Skills = () => {
     {
       category: "Development",
       skills: [
+        { name: "API Integration", level: 85 },
         { name: "JavaScript | TypeScript", level: 90 },
         { name: "React.js", level: 75 },
         { name: "Html & CSS", level: 80 },

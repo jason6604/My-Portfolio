@@ -1,9 +1,19 @@
 .portfolio {
     display:inline-block;
     width: 100%;
-    padding: 100px 0;
-    background-color: #ffffff;
+    padding: 60px 0;
+    background-color: white;
+    background-size: cover;
     color:black;
+  }
+
+  .portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 1.5%;
+    backdrop-filter:blur(3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
   
   .section-header {
@@ -84,4 +94,18 @@
   
   .view-project:hover {
     background: #0056b3;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .portfolio-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {  
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
   }
