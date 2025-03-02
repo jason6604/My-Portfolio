@@ -10,7 +10,7 @@ import cnicon from '../assets/china.png'
 const About = () => {
   const { translations } = useContext(LanguageContext);
 
-  const WorkExperience = [
+  /*const WorkExperience = [
     {years: '2020-2025', company:'LYC | Hitachi Solution', jobtitle: 'Technical Lead', jobsummary:'Dynamic 365 CE', location:['Japan']},
     {years: '2019', company:'Titansoft', jobtitle: 'Technical Consultant', jobsummary:'API Integration', location:['Taiwan']},
     {years: '2017-2018', company:'鉅絖企業', jobtitle: 'Product Manager', jobsummary:'Online Store', location:['Taiwan','China']},
@@ -34,7 +34,7 @@ const About = () => {
       Category: 'Tools',
       Items: ['Visual Studio', 'VS Code', 'DevOps', 'Git', 'Powershell', 'Playwright']
     }
-  ]
+  ]*/
 
   return (
     <section className="about" id="about">
