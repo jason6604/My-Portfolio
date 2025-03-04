@@ -1,5 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { LanguageContext } from '../App';
+import parse from 'html-react-parser';
 import emailjs from '@emailjs/browser';
 import '../styles/Contact.css';
 
@@ -11,8 +13,10 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const { translations } = useContext(LanguageContext);
   const [status, setStatus] = useState({ type: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const infoCards = translations.contact.contactDetails.infoData;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -74,7 +78,7 @@ const Contact = () => {
         viewport={{ once: true }}
       >
         <motion.div className="contact-header" variants={itemVariants}>
-          <h2>Get <strong>In Touch</strong></h2>
+          {parse(translations.contact.title)}
         </motion.div>
 
         <div className="contact-content">
@@ -84,25 +88,18 @@ const Contact = () => {
           >
             {/* Contact Info Cards with Hover Animation */}
             <h3>My Contact Details</h3>
-            <motion.div 
-              className="info-card"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <i className="fas fa-map-marker-alt"></i>
-              <h3>Location</h3>
-              <p>Tokyo, Japan</p>
-            </motion.div>
-
-            <motion.div 
-              className="info-card"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <i className="fas fa-envelope"></i>
-              <h3>Email</h3>
-              <p>jasontsai6604@gmail.com</p>
-            </motion.div>
+            {infoCards.map((card, index) => (
+              <motion.div 
+                key={index}
+                className="info-card"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <i class={card.icon}></i>
+                <h3>{card.title}</h3>
+                <p>{card.text}</p>
+              </motion.div>
+            ))}
 
             {/* Social Media Links with Hover Effects */}
             {/*<motion.div className="social-links">
@@ -134,7 +131,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="from_name"
-                placeholder="Your Name"
+                placeholder={translations.contact.messageInput.placeholder.name}
                 value={formData.name}
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
                 required
@@ -148,7 +145,7 @@ const Contact = () => {
               <input
                 type="email"
                 name="from_email"
-                placeholder="Your Email"
+                placeholder={translations.contact.messageInput.placeholder.email}
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
                 required
@@ -162,7 +159,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="subject"
-                placeholder="Subject"
+                placeholder={translations.contact.messageInput.placeholder.subject}
                 value={formData.subject}
                 onChange={(e) => setFormData({...formData, subject: e.target.value})}
                 required
@@ -175,7 +172,7 @@ const Contact = () => {
             >
               <textarea
                 name="message"
-                placeholder="Your Message"
+                placeholder={translations.contact.messageInput.placeholder.message}
                 value={formData.message}
                 onChange={(e) => setFormData({...formData, message: e.target.value})}
                 required
@@ -189,7 +186,7 @@ const Contact = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              {isSubmitting ? 'Sending...' : 'Send Message'}
+              {isSubmitting ? translations.contact.messageInput.button.sending : translations.contact.messageInput.button.send}
             </motion.button>
 
             <AnimatePresence>

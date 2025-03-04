@@ -1,3 +1,11 @@
+import spacebubble from '../assets/spacebubble.png'
+import stockcrawler from '../assets/stockcrawler.png'
+import youtuberepeat from '../assets/youtuberepeat.png'
+import autotabsopener from '../assets/autotabsopener.png'
+import spacebubbledemo from '../assets/SpaceBubble-Demo.mp4'
+import youtuberepeatdemo from '../assets/YouTubeRepeat-Demo.mp4'
+import autotabsopenerdemo from '../assets/AutoTabsOpener.mp4'
+
 export const translations = {
     en: {
       Navbar: {
@@ -57,16 +65,123 @@ export const translations = {
         }
       },
       skills: {
-        title: "Skills",
-        // Add more translations
+        title: "Skills Overview",
+        description: "A comprehensive overview of my technical expertise and proficiency levels",
+        skillCategories: [
+          {
+            category: "Domain",
+            skills: [
+              { name: "Dynamics 365", level: 90 },        
+              { name: "KPI System", level: 85 },
+              { name: "eHRD", level: 80 },
+              { name: "Scrum", level: 80 }
+            ]
+          },
+          {
+            category: "Development",
+            skills: [
+              { name: "API Integration", level: 85 },
+              { name: "JavaScript | TypeScript", level: 90 },
+              { name: "React.js", level: 75 },
+              { name: "Html & CSS", level: 80 },
+              { name: "C#", level: 90 },
+              { name: "VB", level: 80 },
+              { name: "RDL", level: 90 },
+              { name: "SSIS", level: 85 },
+              { name: "MySQL", level: 80 }
+            ]
+          },
+          {
+            category: "Tools",
+            skills: [
+              { name: "Visual Studio", level: 90 },
+              { name: "VS Code", level: 90 },
+              { name: "DevOps", level: 90 },
+              { name: "Git", level: 85 },
+              { name: "PowerShell", level: 80 },
+              { name: "Playwright", level: 75 }
+            ]
+          },
+          {
+            category: "Languages",
+            skills: [
+              { name: "Chinese", level: 100 },
+              { name: "English", level: 85 },
+              { name: "Japanese", level: 70 }
+            ]
+          }
+        ],
+        addTitle: "Additional Skills",
+        additionalSkills: [
+          "Python",
+          "Java",
+          "Android App",
+          "Eclipse",
+          "Cloudfare",
+          "Web Performance", 
+          "Automation Testing",
+          "Agile Methodology",
+          "Problem Solving",
+          "Team Collaboration"
+        ]      
       },
       portfolio: {
         title: "Portfolio",
-        // Add more translations
+        description: "Recent Works",
+        projects: [
+          {
+            id: 1,
+            title: 'Space Bubble',
+            description: 'Javascript Game Design',
+            image: spacebubble,
+            link: spacebubbledemo
+          },
+          {
+            id: 2,
+            title: 'Stock Fetcher',
+            description: 'Python Web Crawler',
+            image: stockcrawler,
+            link: stockcrawler
+          },
+          {
+            id: 3,
+            title: 'YouTube Replay Tool',
+            description: 'React Web Tool',
+            image: youtuberepeat,
+            link: youtuberepeatdemo
+          },
+          {
+            id: 4,
+            title: 'Auto Tabs Opener',
+            description: 'Browser Extension',
+            image: autotabsopener,
+            link: autotabsopenerdemo
+          }
+        ],
+        viewProject: "View Project"
       },
       contact: {
-        title: "Contact",
-        // Add more translations
+        title: "<h2>Get <strong>In Touch</strong></h2>",
+        contactDetails: {
+          title: "My Contact Details",
+          infoData: [
+            { icon: "fas fa-map-marker-alt", title: "Location", text: "Tokyo, Japan" },
+            { icon: "fas fa-envelope", title: "Email", text: "jasontsai6604@gmail.com" }
+          ]
+        },
+        messageInput: {
+          placeholder: {
+            name: "Your Name",
+            email: "Your Email",
+            subject: "Subject", 
+            message: "Message"
+          },
+          button: {
+            send:  "Send Message",
+            sending: "Sending...",
+            sent: "Message Sent",
+          }
+        }
       },
       footer: {
         title: "Footer",
@@ -131,16 +246,124 @@ export const translations = {
         }
       },
       skills: {
-        title: "Skills",
-        // Add more translations
+        title: "Skills Overview",
+        description: "A comprehensive overview of my technical expertise and proficiency levels",
+        skillCategories: [
+          {
+            category: "Domain",
+            skills: [
+              { name: "Dynamics 365", level: 90 },        
+              { name: "KPI System", level: 85 },
+              { name: "eHRD", level: 80 },
+              { name: "Scrum", level: 80 }
+            ]
+          },
+          {
+            category: "Development",
+            skills: [
+              { name: "API Integration", level: 85 },
+              { name: "JavaScript | TypeScript", level: 90 },
+              { name: "React.js", level: 75 },
+              { name: "Html & CSS", level: 80 },
+              { name: "C#", level: 90 },
+              { name: "VB", level: 80 },
+              { name: "RDL", level: 90 },
+              { name: "SSIS", level: 85 },
+              { name: "MySQL", level: 80 }
+            ]
+          },
+          {
+            category: "Tools",
+            skills: [
+              { name: "Visual Studio", level: 90 },
+              { name: "VS Code", level: 90 },
+              { name: "DevOps", level: 90 },
+              { name: "Git", level: 85 },
+              { name: "PowerShell", level: 80 },
+              { name: "Playwright", level: 75 }
+            ]
+          },
+          {
+            category: "Languages",
+            skills: [
+              { name: "Chinese", level: 100 },
+              { name: "English", level: 85 },
+              { name: "Japanese", level: 70 }
+            ]
+          }
+        ],
+        addTitle: "Additional Skills",
+        additionalSkills: [
+          "Python",
+          "Java",
+          "Android App",
+          "Eclipse",
+          "Cloudfare",
+          "Web Performance", 
+          "Automation Testing",
+          "Agile Methodology",
+          "Problem Solving",
+          "Team Collaboration"
+        ]      
       },
       portfolio: {
         title: "Portfolio",
-        // Add more translations
+        description: "Recent Works",
+        projects: [
+          {
+            id: 1,
+            title: 'Space Bubble',
+            description: 'Javascript Game Design',
+            image: spacebubble,
+            link: spacebubbledemo
+          },
+          {
+            id: 2,
+            title: 'Stock Fetcher',
+            description: 'Python Web Crawler',
+            image: stockcrawler,
+            link: stockcrawler
+          },
+          {
+            id: 3,
+            title: 'YouTube Replay Tool',
+            description: 'React Web Tool',
+            image: youtuberepeat,
+            link: youtuberepeatdemo
+          },
+          {
+            id: 4,
+            title: 'Auto Tabs Opener',
+            description: 'Browser Extension',
+            image: autotabsopener,
+            link: autotabsopenerdemo
+          }
+          // Add more projects
+        ],
+        viewProject: "View Project"
       },
       contact: {
-        title: "Contact",
-        // Add more translations
+        title: "<h2>Get <strong>In Touch</strong></h2>",
+        contactDetails: {
+          title: "My Contact Details",
+          infoData: [
+            { icon: "fas fa-map-marker-alt", title: "Location", text: "Tokyo, Japan" },
+            { icon: "fas fa-envelope", title: "Email", text: "jasontsai6604@gmail.com" }
+          ]
+        },
+        messageInput: {
+          placeholder: {
+            name: "Your Name",
+            email: "Your Email",
+            subject: "Subject", 
+            message: "Message"
+          },
+          button: {
+            send:  "Send Message",
+            sending: "Sending...",
+            sent: "Message Sent",
+          }
+        }
       },
       footer: {
         title: "Footer",
@@ -205,16 +428,124 @@ export const translations = {
         }
       },
       skills: {
-        title: "Skills",
-        // Add more translations
+        title: "Skills Overview",
+        description: "A comprehensive overview of my technical expertise and proficiency levels",
+        skillCategories: [
+          {
+            category: "Domain",
+            skills: [
+              { name: "Dynamics 365", level: 90 },        
+              { name: "KPI System", level: 85 },
+              { name: "eHRD", level: 80 },
+              { name: "Scrum", level: 80 }
+            ]
+          },
+          {
+            category: "Development",
+            skills: [
+              { name: "API Integration", level: 85 },
+              { name: "JavaScript | TypeScript", level: 90 },
+              { name: "React.js", level: 75 },
+              { name: "Html & CSS", level: 80 },
+              { name: "C#", level: 90 },
+              { name: "VB", level: 80 },
+              { name: "RDL", level: 90 },
+              { name: "SSIS", level: 85 },
+              { name: "MySQL", level: 80 }
+            ]
+          },
+          {
+            category: "Tools",
+            skills: [
+              { name: "Visual Studio", level: 90 },
+              { name: "VS Code", level: 90 },
+              { name: "DevOps", level: 90 },
+              { name: "Git", level: 85 },
+              { name: "PowerShell", level: 80 },
+              { name: "Playwright", level: 75 }
+            ]
+          },
+          {
+            category: "Languages",
+            skills: [
+              { name: "Chinese", level: 100 },
+              { name: "English", level: 85 },
+              { name: "Japanese", level: 70 }
+            ]
+          }
+        ],
+        addTitle: "Additional Skills",
+        additionalSkills: [
+          "Python",
+          "Java",
+          "Android App",
+          "Eclipse",
+          "Cloudfare",
+          "Web Performance", 
+          "Automation Testing",
+          "Agile Methodology",
+          "Problem Solving",
+          "Team Collaboration"
+        ]      
       },
       portfolio: {
         title: "Portfolio",
-        // Add more translations
+        description: "Recent Works",
+        projects: [
+          {
+            id: 1,
+            title: 'Space Bubble',
+            description: 'Javascript Game Design',
+            image: spacebubble,
+            link: spacebubbledemo
+          },
+          {
+            id: 2,
+            title: 'Stock Fetcher',
+            description: 'Python Web Crawler',
+            image: stockcrawler,
+            link: stockcrawler
+          },
+          {
+            id: 3,
+            title: 'YouTube Replay Tool',
+            description: 'React Web Tool',
+            image: youtuberepeat,
+            link: youtuberepeatdemo
+          },
+          {
+            id: 4,
+            title: 'Auto Tabs Opener',
+            description: 'Browser Extension',
+            image: autotabsopener,
+            link: autotabsopenerdemo
+          }
+          // Add more projects
+        ],
+        viewProject: "View Project"
       },
       contact: {
-        title: "Contact",
-        // Add more translations
+        title: "<h2>Get <strong>In Touch</strong></h2>",
+        contactDetails: {
+          title: "My Contact Details",
+          infoData: [
+            { icon: "fas fa-map-marker-alt", title: "Location", text: "Tokyo, Japan" },
+            { icon: "fas fa-envelope", title: "Email", text: "jasontsai6604@gmail.com" }
+          ]
+        },
+        messageInput: {
+          placeholder: {
+            name: "您的姓名",
+            email: "您的信箱",
+            subject: "主旨", 
+            message: "訊息"
+          },
+          button: {
+            send:  "送出",
+            sending: "傳送中...",
+            sent: "Message Sent",
+          }
+        }
       },
       footer: {
         title: "Footer",

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { LanguageContext } from '../App';
 import '../styles/Navbar.css';
 import logo from'../assets/logo.jpg';
+import { languages } from '../resource/common.js';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,12 +13,6 @@ const Navbar = () => {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const { currentLang, setCurrentLang, translations } = useContext(LanguageContext);
   const langDropdownRef = useRef(null);
-  const languages = [
-    { code: 'en', label: 'English' },
-    { code: 'jp', label: '日本語' },
-    { code: 'tw', label: '中文' }
-  ];
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,8 +45,7 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
     document.addEventListener('mousedown', handleClickOutside);
-
-    window.addEventListener('scroll', handleScroll);
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('mousedown', handleClickOutside);

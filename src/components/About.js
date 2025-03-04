@@ -1,5 +1,6 @@
-import React, { useContext } from 'react';
-import { motion } from 'framer-motion';
+import React, { useContext, useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { languages } from '../resource/common.js';
 import { LanguageContext } from '../App';
 import parse from 'html-react-parser';
 import '../styles/About.css';
@@ -9,32 +10,25 @@ import cnicon from '../assets/china.png'
 
 const About = () => {
   const { translations } = useContext(LanguageContext);
+  const [isDownCVOpen, setDownCVOpen] = useState(false);
+  const cvDropdownRef = useRef(null);
+  const WorkExperience = translations.about.workExperience;
+  const Expertises =translations.about.expertises.data;
+  const Stats = translations.about.stats;
 
-  /*const WorkExperience = [
-    {years: '2020-2025', company:'LYC | Hitachi Solution', jobtitle: 'Technical Lead', jobsummary:'Dynamic 365 CE', location:['Japan']},
-    {years: '2019', company:'Titansoft', jobtitle: 'Technical Consultant', jobsummary:'API Integration', location:['Taiwan']},
-    {years: '2017-2018', company:'鉅絖企業', jobtitle: 'Product Manager', jobsummary:'Online Store', location:['Taiwan','China']},
-    {years: '2014-2017', company:'aEnrich Technology', jobtitle: 'Senior SE/SA', jobsummary:'eHRD | KPI System', location:['Taiwan']},
-  ];
+  useEffect(() => {
+     const handleClickOutside = (event) => {
+       if (cvDropdownRef.current && !cvDropdownRef.current.contains(event.target)) {
+        setDownCVOpen(false);
+       }
+     };
 
-  const Expertises =[
-    { 
-      Category: 'Domain Knowledge',
-      Items: ['Dynamics 365', 'KPI System', 'eHRD', 'Payment System']
-    },
-    { 
-      Category: 'Dev Konwledge',
-      Items: ['Web Dev', 'Front-End Dev', 'Back-End Dev', 'API Intergration', 'Database']
-    },
-    { 
-      Category: 'Language & DB',
-      Items: ['JavaScript', 'TypeScript','Html & CSS', 'C#', 'MSSQL', 'MySQL']
-    },
-    { 
-      Category: 'Tools',
-      Items: ['Visual Studio', 'VS Code', 'DevOps', 'Git', 'Powershell', 'Playwright']
-    }
-  ]*/
+     document.addEventListener('mousedown', handleClickOutside);
+     
+     return () => {
+       document.removeEventListener('mousedown', handleClickOutside);
+     };
+  }, []);
 
   return (
     <section className="about" id="about">
@@ -48,15 +42,50 @@ const About = () => {
         >
           <div className="about-text">
             {parse(translations.about.aboutText)}
-            <div className="about-buttons">
-              <a href="/path-to-cv.pdf" className="cv-button" download>
+            <div className="about-buttons" ref={cvDropdownRef}>
+              <motion.button
+                className="cv-button"
+                onClick={() => setDownCVOpen(!isDownCVOpen)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 {translations.about.button.downloadCV}
-              </a>              
+                <svg 
+                  className={`arrow-icon ${isDownCVOpen ? 'open' : ''}`}
+                  width="10" 
+                  height="6" 
+                  viewBox="0 0 10 6"
+                >
+                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+                </svg>
+              </motion.button>
+
+              <AnimatePresence>
+                {isDownCVOpen && (
+                  <motion.div
+                    className="cv-list"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {languages.map((lang) => (
+                      <motion.button
+                        key={lang.code}
+                        className={'cv-option'}
+                        whileHover={{ backgroundColor: 'rgba(0, 56, 115, 0.5)' }}
+                      >
+                        {lang.label}
+                      </motion.button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </div>
 
           <div className="about-timeline">
-            {translations.about.workExperience.map((job, index) => (
+            {WorkExperience.map((job, index) => (
               <div className={(index+1) % 2 === 1 ? "timeline-container-left" : "timeline-container-right"}>
                 <div className='timeline-content'>
                   <h4>{job.years}</h4>
@@ -80,7 +109,7 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          {translations.about.stats.map((stat, index) => (
+          {Stats.map((stat, index) => (
             <div className="stat-item" key={index}>
               <h3>{stat.file ? <a href={stat.file} target="_blank" rel="noreferrer">{stat.number}</a> : stat.number}</h3>
               <p>{stat.text}</p>
@@ -97,7 +126,7 @@ const About = () => {
         >
           <h3>{translations.about.expertises.title}</h3>
           <div className="expertise-grid">
-            {translations.about.expertises.data.map((expertises) => (
+            {Expertises.map((expertises) => (
               <div className="expertise-container">     
                 <h4>{expertises.Category}</h4>
                 <div className='expertise-items'>

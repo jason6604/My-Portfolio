@@ -44,10 +44,11 @@
   .contact-info {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
 
   .contact-info h3 {
+    margin-bottom: 10px;
     font-size: 1.5rem;
     font-weight: 200;
     color:#fffafa;
@@ -55,7 +56,7 @@
   
   .info-card {
     background: #333;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     text-align: center;
@@ -64,7 +65,7 @@
   .info-card i {
     font-size: 2rem;
     color: #2c3e50;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
   
   .info-card h3 {

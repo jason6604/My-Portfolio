@@ -1,44 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { LanguageContext } from '../App';
 import { motion } from 'framer-motion';
 import '../styles/Skills.css';
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      category: "Domain",
-      skills: [
-        { name: "Dynamics 365", level: 90 },        
-        { name: "KPI System", level: 85 },
-        { name: "eHRD", level: 80 },
-        { name: "Scrum", level: 80 }
-      ]
-    },
-    {
-      category: "Development",
-      skills: [
-        { name: "API Integration", level: 85 },
-        { name: "JavaScript | TypeScript", level: 90 },
-        { name: "React.js", level: 75 },
-        { name: "Html & CSS", level: 80 },
-        { name: "C#", level: 90 },
-        { name: "VB", level: 80 },
-        { name: "RDL", level: 90 },
-        { name: "SSIS", level: 85 },
-        { name: "MySQL", level: 80 }
-      ]
-    },
-    {
-      category: "Tools",
-      skills: [
-        { name: "Visual Studio", level: 90 },
-        { name: "VS Code", level: 90 },
-        { name: "DevOps", level: 90 },
-        { name: "Git", level: 85 },
-        { name: "PowerShell", level: 80 },
-        { name: "Playwright", level: 75 }
-      ]
-    }
-  ];
+  const { translations } = useContext(LanguageContext);
+  const skillCategories = translations.skills.skillCategories;
+  const additionalSkills = translations.skills.additionalSkills;
 
   return (
     <section className="skills" id="skills">
@@ -50,8 +18,8 @@ const Skills = () => {
         viewport={{ once: true }}
       >
         <div className="skills-header">
-          <h2>Skills Overview</h2>
-          <p>A comprehensive overview of my technical expertise and proficiency levels</p>
+          <h2>{translations.skills.title}</h2>
+          <p>{translations.skills.description}</p>
         </div>
 
         <div className="skills-grid">
@@ -95,20 +63,9 @@ const Skills = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3>Additional Skills</h3>
+          <h3>{translations.skills.addTitle}</h3>
           <div className="skill-tags">
-            {[
-              "Python",
-              "Java",
-              "Android App",
-              "Eclipse",
-              "Cloudfare",
-              "Web Performance", 
-              "Automation Testing",
-              "Agile Methodology",
-              "Problem Solving",
-              "Team Collaboration"
-            ].map((tag, index) => (
+            {additionalSkills.map((tag, index) => (
               <motion.span 
                 key={index}
                 className="skill-tag"
