@@ -7,6 +7,9 @@ import '../styles/About.css';
 import twicon from '../assets/taiwan.png'
 import jpicon from '../assets/japan.png'
 import cnicon from '../assets/china.png'
+import cv_en from '../assets/cv_en.pdf'
+import cv_zh from '../assets/cv_zh.pdf'
+import cv_jp from '../assets/cv_jp.pdf'
 
 const About = () => {
   const { translations } = useContext(LanguageContext);
@@ -70,13 +73,15 @@ const About = () => {
                     transition={{ duration: 0.2 }}
                   >
                     {languages.map((lang) => (
-                      <motion.button
-                        key={lang.code}
-                        className={'cv-option'}
-                        whileHover={{ backgroundColor: 'rgba(0, 56, 115, 0.5)' }}
-                      >
-                        {lang.label}
-                      </motion.button>
+                      <a href={lang.code === "en" ? cv_en :lang.code === "zh" ? cv_zh : cv_jp} download>
+                        <motion.button
+                          key={lang.code}
+                          className={'cv-option'}
+                          whileHover={{ backgroundColor: 'rgba(0, 56, 115, 0.5)' }}
+                        >                        
+                          {lang.label}
+                        </motion.button>
+                      </a>
                     ))}
                   </motion.div>
                 )}

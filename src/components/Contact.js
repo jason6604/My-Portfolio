@@ -34,14 +34,14 @@ const Contact = () => {
       if (result.text === 'OK') {
         setStatus({
           type: 'success',
-          message: 'Message sent successfully! I will get back to you soon.'
+          message: translations.contact.messageSent.success
         });
         setFormData({ name: '', email: '', subject: '', message: '' });
       }
     } catch (error) {
       setStatus({
         type: 'error',
-        message: 'Failed to send message. Please try again.'
+        message: translations.contact.messageSent.error
       });
     } finally {
       setIsSubmitting(false);
@@ -87,7 +87,7 @@ const Contact = () => {
             variants={itemVariants}
           >
             {/* Contact Info Cards with Hover Animation */}
-            <h3>My Contact Details</h3>
+            <h3>{translations.contact.contactDetails.title}</h3>
             {infoCards.map((card, index) => (
               <motion.div 
                 key={index}

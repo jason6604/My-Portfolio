@@ -186,8 +186,13 @@
     text-align: left;
     cursor: pointer;
     font-weight: 500;
-    color: var(--text-color);
+    color: white;
     transition: all 0.2s ease;
+  }
+
+  .cv-option a {
+    text-decoration: none;
+    color: white;
   }
 
   .cv-option:hover {

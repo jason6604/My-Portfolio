@@ -181,6 +181,10 @@ export const translations = {
             sending: "Sending...",
             sent: "Message Sent",
           }
+        },
+        messageSent: {
+          success: "Message sent successfully! I will get back to you soon.",
+          error: "Failed to send message. Please try again."
         }
       },
       footer: {
@@ -363,6 +367,10 @@ export const translations = {
             sending: "Sending...",
             sent: "Message Sent",
           }
+        },
+        messageSent: {
+          success: "Message sent successfully! I will get back to you soon.",
+          error: "Failed to send message. Please try again."
         }
       },
       footer: {
@@ -370,7 +378,7 @@ export const translations = {
         // Add more translations
       }
     },
-    tw: {
+    zh: {
       Navbar: {
         home: "首頁",
         about: "關於",
@@ -428,22 +436,22 @@ export const translations = {
         }
       },
       skills: {
-        title: "Skills Overview",
-        description: "A comprehensive overview of my technical expertise and proficiency levels",
+        title: "技術總攬",
+        description: "全面概述我的技術專長和熟練程度",
         skillCategories: [
           {
-            category: "Domain",
+            category: "專業知識",
             skills: [
-              { name: "Dynamics 365", level: 90 },        
+              { name: "Dynamics 365", level: 90 }, 
+              { name: "API Integration", level: 85 },   
               { name: "KPI System", level: 85 },
               { name: "eHRD", level: 80 },
               { name: "Scrum", level: 80 }
             ]
           },
           {
-            category: "Development",
-            skills: [
-              { name: "API Integration", level: 85 },
+            category: "開發語言",
+            skills: [              
               { name: "JavaScript | TypeScript", level: 90 },
               { name: "React.js", level: 75 },
               { name: "Html & CSS", level: 80 },
@@ -455,7 +463,7 @@ export const translations = {
             ]
           },
           {
-            category: "Tools",
+            category: "開發工具",
             skills: [
               { name: "Visual Studio", level: 90 },
               { name: "VS Code", level: 90 },
@@ -466,15 +474,15 @@ export const translations = {
             ]
           },
           {
-            category: "Languages",
+            category: "語言能力",
             skills: [
-              { name: "Chinese", level: 100 },
-              { name: "English", level: 85 },
-              { name: "Japanese", level: 70 }
+              { name: "中文", level: 100 },
+              { name: "英文", level: 85 },
+              { name: "日文", level: 70 }
             ]
           }
         ],
-        addTitle: "Additional Skills",
+        addTitle: "其他技能",
         additionalSkills: [
           "Python",
           "Java",
@@ -484,52 +492,53 @@ export const translations = {
           "Web Performance", 
           "Automation Testing",
           "Agile Methodology",
+          "Scrum",
           "Problem Solving",
           "Team Collaboration"
         ]      
       },
       portfolio: {
-        title: "Portfolio",
-        description: "Recent Works",
+        title: "作品",
+        description: "近期作品",
         projects: [
           {
             id: 1,
-            title: 'Space Bubble',
-            description: 'Javascript Game Design',
+            title: '星際泡泡',
+            description: 'Javascript遊戲設計',
             image: spacebubble,
             link: spacebubbledemo
           },
           {
             id: 2,
-            title: 'Stock Fetcher',
-            description: 'Python Web Crawler',
+            title: '股票資訊擷取工具',
+            description: 'Python網頁爬蟲工具',
             image: stockcrawler,
             link: stockcrawler
           },
           {
             id: 3,
-            title: 'YouTube Replay Tool',
-            description: 'React Web Tool',
+            title: 'YouTube影片重播工具',
+            description: 'React網頁工具',
             image: youtuberepeat,
             link: youtuberepeatdemo
           },
           {
             id: 4,
-            title: 'Auto Tabs Opener',
-            description: 'Browser Extension',
+            title: '自動分頁開啟工具',
+            description: '瀏覽器擴充元件',
             image: autotabsopener,
             link: autotabsopenerdemo
           }
           // Add more projects
         ],
-        viewProject: "View Project"
+        viewProject: "Demo影片"
       },
       contact: {
-        title: "<h2>Get <strong>In Touch</strong></h2>",
+        title: "<h2><strong>與我聯繫</strong></h2>",
         contactDetails: {
-          title: "My Contact Details",
+          title: "聯絡資訊",
           infoData: [
-            { icon: "fas fa-map-marker-alt", title: "Location", text: "Tokyo, Japan" },
+            { icon: "fas fa-map-marker-alt", title: "位置", text: "日本，東京" },
             { icon: "fas fa-envelope", title: "Email", text: "jasontsai6604@gmail.com" }
           ]
         },
@@ -544,7 +553,11 @@ export const translations = {
             send:  "送出",
             sending: "傳送中...",
             sent: "Message Sent",
-          }
+          },
+        },
+        messageSent: {
+          success: "訊息已成功送出，我會盡快回覆您",
+          error: "訊息傳送失敗，請再試一次"
         }
       },
       footer: {
