@@ -252,7 +252,7 @@ const Navbar = () => {
                         <motion.button
                           key={lang.code}
                           className={`language-option ${currentLang === lang.code ? 'active' : ''}`}
-                          onClick={() => handleLanguageChange(lang.code)}
+                          onClick={() => {handleLanguageChange(lang.code); setIsOpen(false);}}
                           whileHover={{ backgroundColor: 'rgba(0, 123, 255, 0.1)' }}
                         >
                           {lang.label}

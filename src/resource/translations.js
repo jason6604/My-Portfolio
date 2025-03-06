@@ -16,7 +16,7 @@ export const translations = {
         contact: "Contact",
       },
       home: {
-        name: "Tsai Chia-Han",
+        name: "Tsai Chia-Han ",
         alphabetic:"",
         jobTitle: "Tech Lead - Software Developer",
         description: "Problem Solver / Team Player / Quick Learner",
@@ -26,7 +26,7 @@ export const translations = {
         },
       },
       about: {
-        aboutText: "<h2>About Me</h2><p>Skilled Full Stack Software Engineer with 10 years of experience.<br/>Passionate about providing high-quality and elegant solutions.</p><p>Strong knowledge in front-end and back-end development,<br/>proficient in using different frameworks, programming languages and tools.<br/>Dedicate in requirement analysis, development and troubleshooting,<br/>also pay great attention to team communication and cooperation.</p><div className='about-buttons'></div>",
+        aboutText: "<h2>About Me</h2><p>Skilled Full Stack Software Engineer with 10 years of experience.<br/>Passionate about providing high-quality and elegant solutions.<br/>Strong knowledge in front-end and back-end development. <br/>Ability to adapt to using different frameworks, programming languages and tools.<br/>Dedicate in requirement analysis, development and troubleshooting,<br/>also pay great attention to team communication and cooperation.</p><div className='about-buttons'></div>",
         button: {
           downloadCV: "Download CV",
         },
@@ -71,7 +71,8 @@ export const translations = {
           {
             category: "Domain",
             skills: [
-              { name: "Dynamics 365", level: 90 },        
+              { name: "Dynamics 365", level: 90 },
+              { name: "API Integration", level: 85 },
               { name: "KPI System", level: 85 },
               { name: "eHRD", level: 80 },
               { name: "Scrum", level: 80 }
@@ -80,7 +81,6 @@ export const translations = {
           {
             category: "Development",
             skills: [
-              { name: "API Integration", level: 85 },
               { name: "JavaScript | TypeScript", level: 90 },
               { name: "React.js", level: 75 },
               { name: "Html & CSS", level: 80 },
@@ -211,14 +211,14 @@ export const translations = {
         },
       },
       about: {
-        aboutText: "<h2>About Me</h2><p>Skilled Full Stack Software Engineer with 10 years of experience.<br/>Passionate about providing high-quality and elegant solutions.</p><p>Strong knowledge in front-end and back-end development,<br/>proficient in using different frameworks, programming languages and tools.<br/>Dedicate in requirement analysis, development and troubleshooting,<br/>also pay great attention to team communication and cooperation.</p><div className='about-buttons'></div>",
+        aboutText: "<h2>プロフィール</h2><p>10 年の経験を持つ熟練したフルスタック ソフトウェア エンジニアです。<br/>高品質のソリューションを提供することに熱意を持っています。</br>フロントエンドとバックエンドの開発に関する深い理解と、さまざまなフレームワークの使用に適応する能力を持っています。<br/>要件分析、開発、トラブルシューティングに専念し、チームのコミュニケーションとコラボレーションをとても重視しています。</p><div className='about-buttons'></div>",
         button: {
-          downloadCV: "Download CV",
+          downloadCV: "履歴書ダウンロード",
         },
         stats: [
-          { number: '10+', text: 'Years Experience' },
-          { number: '30+', text: 'Projects Completed' },
-          { number: '8+', text: 'Achievements & Certificates' }
+          { number: '10+', text: '経験年数' },
+          { number: '30+', text: '参加プロジェクト' },
+          { number: '8+', text: '実績と認証' }
         ],
         workExperience: [
           {years: '2020-2025', company:'LYC | 日立ソリューションズ', jobtitle: '技術リーダー', jobsummary:'Dynamic 365 CE', location:['Japan']},
@@ -231,41 +231,41 @@ export const translations = {
           data:
           [
             { 
-              Category: 'Domain Knowledge',
+              Category: 'ドメイン知識',
               Items: ['Dynamics 365', 'KPI System', 'eHRD', 'Payment System']
             },
             { 
-              Category: 'Dev Konwledge',
+              Category: '開発知識',
               Items: ['Web Dev', 'Front-End Dev', 'Back-End Dev', 'API Intergration', 'Database']
             },
             { 
-              Category: 'Language & DB',
+              Category: 'プログラミング言語 ＆ DB',
               Items: ['JavaScript', 'TypeScript','Html & CSS', 'C#', 'MSSQL', 'MySQL']
             },
             { 
-              Category: 'Tools',
+              Category: '開発ツール',
               Items: ['Visual Studio', 'VS Code', 'DevOps', 'Git', 'Powershell', 'Playwright']
             }
           ]
         }
       },
       skills: {
-        title: "Skills Overview",
-        description: "A comprehensive overview of my technical expertise and proficiency levels",
+        title: "スキル概要",
+        description: "技術的専門知識と熟練度の概要",
         skillCategories: [
           {
-            category: "Domain",
+            category: "ドメイン",
             skills: [
-              { name: "Dynamics 365", level: 90 },        
+              { name: "Dynamics 365", level: 90 },
+              { name: "API Integration", level: 85 },    
               { name: "KPI System", level: 85 },
               { name: "eHRD", level: 80 },
               { name: "Scrum", level: 80 }
             ]
           },
           {
-            category: "Development",
-            skills: [
-              { name: "API Integration", level: 85 },
+            category: "開発について",
+            skills: [              
               { name: "JavaScript | TypeScript", level: 90 },
               { name: "React.js", level: 75 },
               { name: "Html & CSS", level: 80 },
@@ -277,7 +277,7 @@ export const translations = {
             ]
           },
           {
-            category: "Tools",
+            category: "ツール",
             skills: [
               { name: "Visual Studio", level: 90 },
               { name: "VS Code", level: 90 },
@@ -288,15 +288,15 @@ export const translations = {
             ]
           },
           {
-            category: "Languages",
+            category: "言語",
             skills: [
-              { name: "Chinese", level: 100 },
-              { name: "English", level: 85 },
-              { name: "Japanese", level: 70 }
+              { name: "中国語", level: 100 },
+              { name: "英語", level: 85 },
+              { name: "日本語", level: 70 }
             ]
           }
         ],
-        addTitle: "Additional Skills",
+        addTitle: "他のスキール",
         additionalSkills: [
           "Python",
           "Java",
@@ -311,66 +311,66 @@ export const translations = {
         ]      
       },
       portfolio: {
-        title: "Portfolio",
-        description: "Recent Works",
+        title: "作品",
+        description: "最近の作品",
         projects: [
           {
             id: 1,
-            title: 'Space Bubble',
-            description: 'Javascript Game Design',
+            title: 'スペースバブル',
+            description: 'Javascript ゲームデザイン',
             image: spacebubble,
             link: spacebubbledemo
           },
           {
             id: 2,
-            title: 'Stock Fetcher',
-            description: 'Python Web Crawler',
+            title: '株価データフェッチャー',
+            description: 'Python ウェブクローラー',
             image: stockcrawler,
             link: stockcrawler
           },
           {
             id: 3,
-            title: 'YouTube Replay Tool',
-            description: 'React Web Tool',
+            title: 'YouTube 再生ツール',
+            description: 'React ウェブツール',
             image: youtuberepeat,
             link: youtuberepeatdemo
           },
           {
             id: 4,
-            title: 'Auto Tabs Opener',
-            description: 'Browser Extension',
+            title: '自動タブオープナー',
+            description: 'ブラウザ拡張機能',
             image: autotabsopener,
             link: autotabsopenerdemo
           }
           // Add more projects
         ],
-        viewProject: "View Project"
+        viewProject: "デモビデオ"
       },
       contact: {
-        title: "<h2>Get <strong>In Touch</strong></h2>",
+        title: "<h2><strong>問い合わせ</strong></h2>",
         contactDetails: {
-          title: "My Contact Details",
+          title: "連絡先",
           infoData: [
-            { icon: "fas fa-map-marker-alt", title: "Location", text: "Tokyo, Japan" },
-            { icon: "fas fa-envelope", title: "Email", text: "jasontsai6604@gmail.com" }
+            { icon: "fas fa-map-marker-alt", title: "位置", text: "東京、日本" },
+            { icon: "fas fa-envelope", title: "メール", text: "jasontsai6604@gmail.com" }
           ]
         },
         messageInput: {
           placeholder: {
-            name: "Your Name",
-            email: "Your Email",
-            subject: "Subject", 
-            message: "Message"
+            name: "名前",
+            email: "メールアドレス",
+            subject: "主題", 
+            message: "メッセージ"
           },
           button: {
-            send:  "Send Message",
-            sending: "Sending...",
+            send:  "送信",
+            sending: "送信中...",
             sent: "Message Sent",
           }
         },
         messageSent: {
-          success: "Message sent successfully! I will get back to you soon.",
-          error: "Failed to send message. Please try again."
+          success: "メッセージは正常に送信されました。すぐに返信いたします。",
+          error: "メッセージを送信できませんでした。もう一度お試しください。"
         }
       },
       footer: {
@@ -397,7 +397,7 @@ export const translations = {
         },
       },
       about: {
-        aboutText: "<h2>經歷簡述</h2><p>擁有10年經驗的資深軟體工程師<br/>致力於提供高品質與精緻的軟體工程解決方案</p><p>10年的軟體開發職涯深耕於 前/後 端的全端開發<br/>致使熟練於不同的框架、程式語言與開發工具<br/>主要著力於需求分析、開發和故障排除<br/>也注重團隊的溝通與合作所帶來的工作成效</p><div className='about-buttons'></div>",
+        aboutText: "<h2>經歷簡述</h2><p>擁有10年經驗的資深軟體工程師<br/>致力於提供高品質與精緻的軟體工程解決方案<br/>10年的軟體開發職涯深耕於 前/後 端的全端開發<br/>致使能適應於不同的框架、程式語言與開發工具<br/>主要著力於需求分析、開發和故障排除<br/>也注重團隊的溝通與合作所帶來的工作成效</p><div className='about-buttons'></div>",
         button: {
           downloadCV: "履歷下載",
         },
