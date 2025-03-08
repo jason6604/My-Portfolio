@@ -3,6 +3,7 @@ import stockcrawler from '../assets/stockcrawler.png'
 import youtuberepeat from '../assets/youtuberepeat.png'
 import autotabsopener from '../assets/autotabsopener.png'
 import spacebubbledemo from '../assets/SpaceBubble-Demo.mp4'
+import stockcrawlerdemo from '../assets/StockCrawler-Demo.mp4'
 import youtuberepeatdemo from '../assets/YouTubeRepeat-Demo.mp4'
 import autotabsopenerdemo from '../assets/AutoTabsOpener.mp4'
 
@@ -141,7 +142,7 @@ export const translations = {
             title: 'Stock Fetcher',
             description: 'Python Web Crawler',
             image: stockcrawler,
-            link: stockcrawler
+            link: stockcrawlerdemo
           },
           {
             id: 3,
@@ -311,7 +312,7 @@ export const translations = {
         ]      
       },
       portfolio: {
-        title: "作品",
+        title: "ポートフォリオ",
         description: "最近の作品",
         projects: [
           {
@@ -326,7 +327,7 @@ export const translations = {
             title: '株価データフェッチャー',
             description: 'Python ウェブクローラー',
             image: stockcrawler,
-            link: stockcrawler
+            link: stockcrawlerdemo
           },
           {
             id: 3,
@@ -513,7 +514,7 @@ export const translations = {
             title: '股票資訊擷取工具',
             description: 'Python網頁爬蟲工具',
             image: stockcrawler,
-            link: stockcrawler
+            link: stockcrawlerdemo
           },
           {
             id: 3,
