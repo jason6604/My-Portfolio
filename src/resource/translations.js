@@ -1,11 +1,13 @@
 import spacebubble from '../assets/spacebubble.png'
 import stockcrawler from '../assets/stockcrawler.png'
+import stockinfoapi from '../assets/stockinfoapi.png'
 import youtuberepeat from '../assets/youtuberepeat.png'
 import autotabsopener from '../assets/autotabsopener.png'
 import spacebubbledemo from '../assets/SpaceBubble-Demo.mp4'
 import stockcrawlerdemo from '../assets/StockCrawler-Demo.mp4'
+import stockinfoapidemo from '../assets/StockInfoAPI-Demo.mp4'
 import youtuberepeatdemo from '../assets/YouTubeRepeat-Demo.mp4'
-import autotabsopenerdemo from '../assets/AutoTabsOpener.mp4'
+import autotabsopenerdemo from '../assets/AutoTabsOpener-Demo.mp4'
 
 export const translations = {
     en: {
@@ -146,13 +148,20 @@ export const translations = {
           },
           {
             id: 3,
+            title: 'Stock Info API',
+            description: 'Web API',
+            image: stockinfoapi,
+            link: stockinfoapidemo
+          },
+          {
+            id: 4,
             title: 'YouTube Replay Tool',
             description: 'React Web Tool',
             image: youtuberepeat,
             link: youtuberepeatdemo
           },
           {
-            id: 4,
+            id: 5,
             title: 'Auto Tabs Opener',
             description: 'Browser Extension',
             image: autotabsopener,
@@ -331,13 +340,20 @@ export const translations = {
           },
           {
             id: 3,
+            title: '株情報 API',
+            description: 'ウェブ API',
+            image: stockinfoapi,
+            link: stockinfoapidemo
+          },
+          {
+            id: 4,
             title: 'YouTube 再生ツール',
             description: 'React ウェブツール',
             image: youtuberepeat,
             link: youtuberepeatdemo
           },
           {
-            id: 4,
+            id: 5,
             title: '自動タブオープナー',
             description: 'ブラウザ拡張機能',
             image: autotabsopener,
@@ -518,13 +534,20 @@ export const translations = {
           },
           {
             id: 3,
+            title: '股票資訊 API',
+            description: 'Web API',
+            image: stockinfoapi,
+            link: stockinfoapidemo
+          },
+          {
+            id: 4,
             title: 'YouTube影片重播工具',
             description: 'React網頁工具',
             image: youtuberepeat,
             link: youtuberepeatdemo
           },
           {
-            id: 4,
+            id: 5,
             title: '自動分頁開啟工具',
             description: '瀏覽器擴充元件',
             image: autotabsopener,
