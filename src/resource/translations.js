@@ -78,6 +78,7 @@ export const translations = {
               { name: "API Integration", level: 85 },
               { name: "KPI System", level: 85 },
               { name: "eHRD", level: 80 },
+              { name: "Payment System", level: 70 },
               { name: "Scrum", level: 80 }
             ]
           },
@@ -270,6 +271,7 @@ export const translations = {
               { name: "API Integration", level: 85 },    
               { name: "KPI System", level: 85 },
               { name: "eHRD", level: 80 },
+              { name: "Payment System", level: 70 },
               { name: "Scrum", level: 80 }
             ]
           },
@@ -463,6 +465,7 @@ export const translations = {
               { name: "API Integration", level: 85 },   
               { name: "KPI System", level: 85 },
               { name: "eHRD", level: 80 },
+              { name: "Payment System", level: 70 },
               { name: "Scrum", level: 80 }
             ]
           },
