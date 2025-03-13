@@ -49,9 +49,10 @@
   }
   
   .portfolio-image img {
-    width: 100%;
+    width: auto;
     height: 300px;
-    object-fit: fill;
+    object-position: 20%;
+    object-fit: cover;
   }
   
   .portfolio-overlay {
