@@ -98,8 +98,10 @@ const About = () => {
                     {job.company} {job.location.map((e) => (
                       <img src={e==='Japan' ? jpicon : (e==='Taiwan' ? twicon : cnicon)} alt={e} title={e}/>
                     ))}<br/>
-                    <span>●{job.jobtitle}</span><br/>
-                    <span>&nbsp;&nbsp;&nbsp;└ {job.jobsummary}</span>
+                    <span>{job.jobtitle}</span><br/>
+                    {String(job.jobsummary).split(",").map((e) => (
+                      <div><span>&nbsp;&nbsp;&nbsp;● {e}</span></div>                      
+                    ))}
                   </p>
                 </div>
               </div>
