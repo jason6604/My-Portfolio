@@ -40,7 +40,7 @@ export const translations = {
         ],
         workExperience: [
           {years: '2020 - PRECENT', company:'LYC | Hitachi Solution', jobtitle: 'Technical Lead', jobsummary:'Dynamic 365 CE', location:['Japan']},
-          {years: '2019', company:'Titansoft', jobtitle: 'Technical Consultant', jobsummary:'API Integration', location:['Taiwan']},
+          {years: '2019', company:'Titansoft', jobtitle: 'Technical Consultant', jobsummary:'API Integration | Payment Systems', location:['Taiwan']},
           {years: '2017 - 2018', company:'JU CO ENTERPRISE', jobtitle: 'Product Manager', jobsummary:'Online Store', location:['Taiwan','China']},
           {years: '2014 - 2017', company:'aEnrich Technology', jobtitle: 'Senior SE/SA', jobsummary:'eHRD | KPI System', location:['Taiwan']},
         ],
