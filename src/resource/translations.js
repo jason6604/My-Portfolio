@@ -39,7 +39,7 @@ export const translations = {
           { number: '8+', text: 'Achievements & Certificates' }
         ],
         workExperience: [
-          {years: '2020 - PRECENT', company:'LYC | Hitachi Solution', jobtitle: 'Technical Lead', jobsummary:'Dynamic 365 CE', location:['Japan']},
+          {years: '2020 - PRECENT', company:'LYC | Hitachi Solution', jobtitle: 'Technical Lead', jobsummary:'Dynamic 365', location:['Japan']},
           {years: '2019', company:'Titansoft', jobtitle: 'Technical Consultant', jobsummary:'RESTful API,Payment System', location:['Taiwan']},
           {years: '2017 - 2018', company:'JU CO ENTERPRISE', jobtitle: 'Product Manager', jobsummary:'Online Store', location:['Taiwan','China']},
           {years: '2014 - 2017', company:'aEnrich Technology', jobtitle: 'Senior SE/SA', jobsummary:'eHRD,KPI System', location:['Taiwan']},
@@ -232,7 +232,7 @@ export const translations = {
           { number: '8+', text: '実績と認証' }
         ],
         workExperience: [
-          {years: '2020 - 現在', company:'LYC | 日立ソリューションズ', jobtitle: '技術リーダー', jobsummary:'Dynamic 365 CE', location:['Japan']},
+          {years: '2020 - 現在', company:'LYC | 日立ソリューションズ', jobtitle: '技術リーダー', jobsummary:'Dynamic 365', location:['Japan']},
           {years: '2019', company:'Titansoft', jobtitle: '技術コンサルタント', jobsummary:'RESTful API,Payment System', location:['Taiwan']},
           {years: '2017 - 2018', company:'JU CO ENTERPRISE', jobtitle: 'プロダクトマネージャー', jobsummary:'Online Store', location:['Taiwan','China']},
           {years: '2014 - 2017', company:'aEnrich Technology', jobtitle: 'Senior SE/SA', jobsummary:'eHRD,KPI System', location:['Taiwan']},
@@ -426,7 +426,7 @@ export const translations = {
           { number: '8+', text: '成就與證照' }
         ],
         workExperience: [
-          {years: '2020 - 在職中', company:'LYC | Hitachi Solution', jobtitle: 'Technical Lead', jobsummary:'Dynamic 365 CE', location:['Japan']},
+          {years: '2020 - 在職中', company:'LYC | Hitachi Solution', jobtitle: 'Technical Lead', jobsummary:'Dynamic 365', location:['Japan']},
           {years: '2019', company:'Titansoft', jobtitle: 'Technical Consultant', jobsummary:'RESTful API,Payment System', location:['Taiwan']},
           {years: '2017 - 2018', company:'鉅絖企業', jobtitle: 'Product Manager', jobsummary:'Online Store', location:['Taiwan','China']},
           {years: '2014 - 2017', company:'aEnrich Technology', jobtitle: 'Senior SE/SA', jobsummary:'eHRD,KPI System', location:['Taiwan']},
