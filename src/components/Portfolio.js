@@ -14,7 +14,8 @@ const Portfolio = () => {
     setDemoVideo(url);
     setShowDemo(true);
     videoRef.current.load();
-    videoRef.current.disablePictureInPicture = true    
+    videoRef.current.disablePictureInPicture = true;
+    videoRef.current.muted = 'muted';
   }
 
   const closeDemeVideo = () => {

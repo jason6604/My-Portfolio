@@ -111,7 +111,12 @@
     right: 14vw;
     z-index: 9903;
     cursor: pointer;
-    border-radius: 50%;    
+    border-radius: 50%;
+  }
+
+  .portfolio-video-close:hover {
+    width: 38px;
+    height: 38px;
   }
 
   .portolio-video-cover{
