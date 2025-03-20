@@ -72,8 +72,8 @@ const About = () => {
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
                   >
-                    {languages.map((lang) => (
-                      <a href={lang.code === "en" ? cv_en :lang.code === "zh" ? cv_zh : cv_jp} download>
+                    {languages.map((lang, index) => (
+                      <a key={index + 160} href={lang.code === "en" ? cv_en :lang.code === "zh" ? cv_zh : cv_jp} download>
                         <motion.button
                           key={lang.code}
                           className={'cv-option'}
@@ -91,16 +91,16 @@ const About = () => {
 
           <div className="about-timeline">
             {WorkExperience.map((job, index) => (
-              <div className={(index+1) % 2 === 1 ? "timeline-container-left" : "timeline-container-right"}>
+              <div key={index + 100} className={(index+1) % 2 === 1 ? "timeline-container-left" : "timeline-container-right"}>
                 <div className='timeline-content'>
                   <h4>{job.years}</h4>
                   <p>
-                    {job.company} {job.location.map((e) => (
-                      <img src={e==='Japan' ? jpicon : (e==='Taiwan' ? twicon : cnicon)} alt={e} title={e}/>
+                    {job.company} {job.location.map((e, index) => (
+                      <img key={index + 110} src={e==='Japan' ? jpicon : (e==='Taiwan' ? twicon : cnicon)} alt={e} title={e}/>
                     ))}<br/>
                     <span>{job.jobtitle}</span><br/>
-                    {String(job.jobsummary).split(",").map((e) => (
-                      <div><span>&nbsp;&nbsp;&nbsp;● {e}</span></div>                      
+                    {String(job.jobsummary).split(",").map((e, index) => (
+                      <span key={index + 120}>&nbsp;&nbsp;&nbsp;● {e}<br/></span>                     
                     ))}
                   </p>
                 </div>
@@ -117,7 +117,7 @@ const About = () => {
           viewport={{ once: true }}
         >
           {Stats.map((stat, index) => (
-            <div className="stat-item" key={index}>
+            <div className="stat-item" key={index + 130}>
               <h3>{stat.file ? <a href={stat.file} target="_blank" rel="noreferrer">{stat.number}</a> : stat.number}</h3>
               <p>{stat.text}</p>
             </div>
@@ -133,12 +133,12 @@ const About = () => {
         >
           <h3>{translations.about.expertises.title}</h3>
           <div className="expertise-grid">
-            {Expertises.map((expertises) => (
-              <div className="expertise-container">     
+            {Expertises.map((expertises, index) => (
+              <div key={index + 140} className="expertise-container">     
                 <h4>{expertises.Category}</h4>
                 <div className='expertise-items'>
-                {expertises.Items.map((item)=>(
-                  <span className='expertise-item'>{item}</span>
+                {expertises.Items.map((item, index)=>(
+                  <span key={index + 150} className='expertise-item'>{item}</span>
                 ))}
                 </div>
               </div>

@@ -83,6 +83,46 @@
     color: #ccc;
     margin-bottom: 20px;
   }
+
+  .portfolio-demo {
+    position: fixed ;
+    width: 70vw;
+    height:  40vw;
+    z-index: 9902;
+    top: 15vh;
+    left: 15vw;
+    background-color: whitesmoke;
+    border-radius: 1%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .portfolio-video {
+    width: 67vw;
+    height: 39vw;
+    margin: 1%;
+  }
+
+  .portfolio-video-close {
+    position: fixed;  
+    background-color: white;
+    width: 36px;
+    height: 36px;
+    top: 13vh;
+    right: 14vw;
+    z-index: 9903;
+    cursor: pointer;
+    border-radius: 50%;    
+  }
+
+  .portolio-video-cover{
+    position: fixed ;
+    width: 100%;
+    height: 100%;
+    z-index: 9901;
+    bottom: 0;
+    background-color:black;
+    opacity: 80%;
+  }
   
   .view-project {
     padding: 10px 20px;

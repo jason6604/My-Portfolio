@@ -95,7 +95,7 @@ const Contact = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <i class={card.icon}></i>
+                <i className={card.icon}></i>
                 <h3>{card.title}</h3>
                 <p>{card.text}</p>
               </motion.div>

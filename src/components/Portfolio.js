@@ -1,12 +1,26 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { LanguageContext } from '../App';
 import '../styles/Portfolio.css';
+import closeImg from '../assets/cross.png'
 
 const Portfolio = () => {
   const { translations } = useContext(LanguageContext);
   const projects = translations.portfolio.projects;
+  const videoRef = useRef(null);
+  const [demoVideo, setDemoVideo] = useState(null);
+  const [showDemo, setShowDemo] = useState(false);
+  
+  const openDemoVideo = (url) => {
+    setDemoVideo(url);
+    setShowDemo(true);
+  }
 
-  const openProject = (url) => {    
+  const closeDemeVideo = () => {
+    videoRef.current.pause();
+    setShowDemo(false);
+  }
+
+  /*const openProject = (url) => {    
     const windowfeature = "popup,top=150%,left=500%,width=600,height=370";
     const handle = window.open(
       url, 
@@ -17,7 +31,7 @@ const Portfolio = () => {
     if (!handle) {
       alert("Your Browser is not allowed Popup.");
     }
-  }
+  }*/
 
   return (
     <section className="portfolio" id="portfolio">
@@ -35,15 +49,21 @@ const Portfolio = () => {
                 <div className="portfolio-overlay">
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
-                  <button onClick={() => openProject(project.link)} className="view-project">
+                  <button onClick={() => openDemoVideo(project.link)} className="view-project">
                     {translations.portfolio.viewProject}
                   </button>
                 </div>
               </div>
             </div>
           ))}
-        </div>
+        </div>        
       </div>
+      <div className='portfolio-demo' style={{display: showDemo?'':'none'}}>
+          <video ref={videoRef} className='portfolio-video' src={demoVideo} controls muted autoPlay>
+          </video>
+      </div>
+      <div className='portolio-video-cover' style={{display: showDemo?'':'none'}}></div>
+      <img className='portfolio-video-close' src={closeImg} alt='close-video' style={{display: showDemo ? '' : 'none'}} onClick={() => closeDemeVideo()}></img>    
     </section>
   );
 };
