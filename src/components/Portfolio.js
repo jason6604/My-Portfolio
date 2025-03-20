@@ -13,6 +13,8 @@ const Portfolio = () => {
   const openDemoVideo = (url) => {
     setDemoVideo(url);
     setShowDemo(true);
+    videoRef.current.load();
+    videoRef.current.disablePictureInPicture = true    
   }
 
   const closeDemeVideo = () => {
