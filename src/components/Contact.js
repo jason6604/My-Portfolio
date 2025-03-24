@@ -17,6 +17,10 @@ const Contact = () => {
   const [status, setStatus] = useState({ type: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const infoCards = translations.contact.contactDetails.infoData;
+  const socialLinks = [
+    { platform: 'linkedin', icon: 'fab fa-linkedin', link: 'https://www.linkedin.com/in/jason-tsai-0179ba165/' },
+    { platform: 'github', icon: 'fab fa-github', link: 'https://github.com/jason6604' },
+  ]
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -102,20 +106,20 @@ const Contact = () => {
             ))}
 
             {/* Social Media Links with Hover Effects */}
-            {/*<motion.div className="social-links">
-              {['linkedin', 'github', 'twitter'].map((platform) => (
+            {<motion.div className="social-links">
+              {socialLinks.map((platform) => (
                 <motion.a
-                  key={platform}
-                  href={`https://${platform}.com/yourusername`}
+                  key={platform.platform}
+                  href={platform.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.2, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <i className={`fab fa-${platform}`}></i>
+                  <i className={platform.icon}></i>
                 </motion.a>
               ))}
-            </motion.div>*/}
+            </motion.div>}
           </motion.div>
 
           <motion.form 
