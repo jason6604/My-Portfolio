@@ -176,8 +176,8 @@ export const translations = {
         contactDetails: {
           title: "My Contact Details",
           infoData: [
-            { icon: "fas fa-map-marker-alt", title: "Location", text: "Tokyo, Japan" },
-            { icon: "fas fa-envelope", title: "Email", text: "jasontsai6604@gmail.com" }
+            { icon: "fas fa-map-marker-alt", title: "Location", text: "Tokyo, Japan", link: "#;" },
+            { icon: "fas fa-envelope", title: "Email", text: "jasontsai6604@gmail.com", link: "mailto:jasontsai6604@gmail.com" }
           ]
         },
         messageInput: {
@@ -370,8 +370,8 @@ export const translations = {
         contactDetails: {
           title: "連絡先",
           infoData: [
-            { icon: "fas fa-map-marker-alt", title: "位置", text: "東京、日本" },
-            { icon: "fas fa-envelope", title: "メール", text: "jasontsai6604@gmail.com" }
+            { icon: "fas fa-map-marker-alt", title: "位置", text: "東京、日本", link: "#;" },
+            { icon: "fas fa-envelope", title: "メール", text: "jasontsai6604@gmail.com", link: "mailto:jasontsai6604@gmail.com" }
           ]
         },
         messageInput: {
@@ -565,8 +565,8 @@ export const translations = {
         contactDetails: {
           title: "聯絡資訊",
           infoData: [
-            { icon: "fas fa-map-marker-alt", title: "位置", text: "日本，東京" },
-            { icon: "fas fa-envelope", title: "Email", text: "jasontsai6604@gmail.com" }
+            { icon: "fas fa-map-marker-alt", title: "位置", text: "日本，東京", link: "#;" },
+            { icon: "fas fa-envelope", title: "Email", text: "jasontsai6604@gmail.com", link: "mailto:jasontsai6604@gmail.com" }
           ]
         },
         messageInput: {

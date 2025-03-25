@@ -93,8 +93,9 @@ const Contact = () => {
             {/* Contact Info Cards with Hover Animation */}
             <h3>{translations.contact.contactDetails.title}</h3>
             {infoCards.map((card, index) => (
-              <motion.div 
+              <motion.a 
                 key={index}
+                href={card.link}
                 className="info-card"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
@@ -102,7 +103,7 @@ const Contact = () => {
                 <i className={card.icon}></i>
                 <h3>{card.title}</h3>
                 <p>{card.text}</p>
-              </motion.div>
+              </motion.a>
             ))}
 
             {/* Social Media Links with Hover Effects */}
