@@ -181,11 +181,6 @@
       grid-template-columns: 1fr;
     }
   
-    .contact-info {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-  
     .info-card {
       flex: 1 1 calc(50% - 15px);
       min-width: 200px;

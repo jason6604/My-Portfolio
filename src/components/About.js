@@ -19,6 +19,15 @@ const About = () => {
   const Expertises =translations.about.expertises.data;
   const Stats = translations.about.stats;
 
+  // const onTimelineJobClick = (e) => {
+  //   const jobDetails = e.currentTarget.querySelector('.job-details');
+  //   if (jobDetails.style.display === 'none') {
+  //     jobDetails.style.display = 'block';
+  //   } else {
+  //     jobDetails.style.display = 'none';
+  //   }
+  // };
+
   useEffect(() => {
      const handleClickOutside = (event) => {
        if (cvDropdownRef.current && !cvDropdownRef.current.contains(event.target)) {
@@ -98,14 +107,22 @@ const About = () => {
                     {job.company} {job.location.map((e, index) => (
                       <img key={index + 110} src={e==='Japan' ? jpicon : (e==='Taiwan' ? twicon : cnicon)} alt={e} title={e}/>
                     ))}<br/>
-                    <span>{job.jobtitle}</span><br/>
-                    {String(job.jobsummary).split(",").map((e, index) => (
-                      <span key={index + 120}>&nbsp;&nbsp;&nbsp;● {e}<br/></span>                     
-                    ))}
+                    <motion.div 
+                      className="job-details"
+                      initial={{ opacity: 0, y: -50 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: 0.2 }}
+                      viewport={{ once: true }}
+                    >
+                      <span>{job.jobtitle}</span><br/>
+                      {String(job.jobsummary).split(",").map((e, index) => (
+                        <span key={index + 120}>&nbsp;&nbsp;&nbsp;● {e}<br/></span>                     
+                      ))}
+                    </motion.div>
                   </p>
                 </div>
               </div>
-            ))}            
+            ))}
           </div>
         </motion.div>
 

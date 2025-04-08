@@ -76,7 +76,7 @@
     position: relative;
     width: 50%;
     left: 50%;
-  } 
+  }  
 
   .timeline-container-left::after {
     content: '';
@@ -116,6 +116,12 @@
     font-size: 1rem;
     color: #5a5e62;
   }
+
+  .timeline-content:hover{
+    background-color: #f0f0f0;
+    border: #e0e1e2 2px solid;
+    box-shadow: 3px 10px 30px rgba(0, 0, 0, 0.2);
+  }
   
   .timeline-content h4 {
     font-size: 20px;
@@ -136,6 +142,11 @@
   .timeline-content img {
     width:15px;
     height: auto;
+  }
+
+  .job-details {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
   }
 
   .about-buttons {
