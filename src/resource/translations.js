@@ -24,7 +24,7 @@ export const translations = {
         jobTitle: "Tech Lead - Software Developer",
         description: "Problem Solver / Team Player / Quick Learner",
         buttons: {
-          viewWork: "View My Work",
+          viewWork: "View My Works",
           contact: "Contact Me",
         },
       },
@@ -176,7 +176,7 @@ export const translations = {
         contactDetails: {
           title: "My Contact Details",
           infoData: [
-            { icon: "fas fa-map-marker-alt", title: "Location", text: "Tokyo, Japan", link: "#;" },
+            { icon: "fas fa-map-marker-alt", title: "Location", text: "Kanagawa, Japan", link: "#;" },
             { icon: "fas fa-envelope", title: "Email", text: "jasontsai6604@gmail.com", link: "mailto:jasontsai6604@gmail.com" }
           ]
         },
@@ -370,7 +370,7 @@ export const translations = {
         contactDetails: {
           title: "連絡先",
           infoData: [
-            { icon: "fas fa-map-marker-alt", title: "位置", text: "東京、日本", link: "#;" },
+            { icon: "fas fa-map-marker-alt", title: "位置", text: "神奈川県横浜市", link: "#;" },
             { icon: "fas fa-envelope", title: "メール", text: "jasontsai6604@gmail.com", link: "mailto:jasontsai6604@gmail.com" }
           ]
         },
@@ -565,7 +565,7 @@ export const translations = {
         contactDetails: {
           title: "聯絡資訊",
           infoData: [
-            { icon: "fas fa-map-marker-alt", title: "位置", text: "日本，東京", link: "#;" },
+            { icon: "fas fa-map-marker-alt", title: "位置", text: "日本，神奈川縣橫濱市", link: "#;" },
             { icon: "fas fa-envelope", title: "Email", text: "jasontsai6604@gmail.com", link: "mailto:jasontsai6604@gmail.com" }
           ]
         },
